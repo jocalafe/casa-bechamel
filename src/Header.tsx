@@ -5,6 +5,8 @@ const StyledHeader = styled.header`
   display: flex;
   background-color: rgba(255,223,46,1);
   justify-content: center;
+  align-items: center;
+  height: 60px;
 `;
 
 const StyledH1 = styled.h1`
