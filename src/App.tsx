@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import Fonts from './fonts';
+import styled, { ThemeProvider } from 'styled-components';
+import GlobalStyles from './GlobalStyles';
+import theme from './theme';
 import Header from './Header';
 import WelcomeCard from './WelcomeCard';
 import background from './assets/images/background.jpg';
@@ -23,12 +24,14 @@ const StyledContainer = styled.div`
 
 export default function App() {
   return (
-    <StyledApp>
-      <Fonts />
-      <Header />
-      <StyledContainer>
-        <WelcomeCard />
-      </StyledContainer>
-    </StyledApp>
+    <ThemeProvider theme={ theme }>
+      <GlobalStyles />
+      <StyledApp>
+        <Header />
+        <StyledContainer>
+          <WelcomeCard />
+        </StyledContainer>
+      </StyledApp>
+    </ThemeProvider>
   );
 }
