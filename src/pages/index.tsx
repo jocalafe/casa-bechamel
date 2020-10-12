@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import GlobalStyles from './GlobalStyles';
-import theme from './theme';
-import Header from './Header';
-import WelcomeCard from './WelcomeCard';
-import background from './assets/images/background.jpg';
+import Layout from '../components/layout';
+import theme from '../components/theme';
+import Header from '../components/Header';
+import Card from '../components/Card';
+import background from '../assets/images/background.jpg';
 
 const StyledApp = styled.div`
   display: flex;
@@ -22,10 +22,19 @@ const StyledContainer = styled.div`
   padding: 20px;
 `;
 
+function WelcomeCard() {
+  return (
+    <Card>
+      <Card.Heading text="Comida hecha con amor, en tu casa u oficina." />
+      <Card.Body>Has tu pedido ya!</Card.Body>
+    </Card>
+  )
+}
+
 export default function App() {
   return (
     <ThemeProvider theme={ theme }>
-      <GlobalStyles />
+      <Layout />
       <StyledApp>
         <Header />
         <StyledContainer>
