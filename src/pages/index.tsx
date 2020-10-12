@@ -28,12 +28,12 @@ function WelcomeCard() {
       <Card.Heading text="Comida hecha con amor, en tu casa u oficina." />
       <Card.Body>Has tu pedido ya!</Card.Body>
     </Card>
-  )
+  );
 }
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
-    <ThemeProvider theme={ theme }>
+    <ThemeProvider theme={theme}>
       <Layout />
       <StyledApp>
         <Header />
